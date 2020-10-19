@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "chenglou92.rescript-vscode",
+    "esbenp.prettier-vscode",
+    "graphql.vscode-graphql"
+  ]
+}

@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  graphql:
+    build: ./server/graphql
+    image: graphql:docker-compose
+    ports:
+      - "4000:4000"
+    volumes:
+      - '/server/graphql/node_modules'
+      - './server/graphql:/server/graphql'
+
+  client:
+    stdin_open: true
+    build:
+      context: ./client
+      dockerfile: Dockerfile #.dev
+    ports:
+      - "3000:3000"
+    depends_on:
+      - graphql
+    # https://stackoverflow.com/a/41571589/3973406
+    command: >
+      sh -c "chmod +x ./wait-for-it.sh &&
+             ./wait-for-it.sh graphql:4000 --timeout=10 --strict -- yarn start"
+    volumes:
+      - '/client/node_modules'
+      - './client:/client'
