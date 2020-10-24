@@ -5,12 +5,12 @@ directive @specifiedBy(
 ) on SCALAR
 
 type Foo {
-  id: ID
+  id: ID!
   text: String!
 }
 
 type Query {
-  foo(id: String): Foo
+  foo(id: ID!): Foo
   foos: [Foo]
 }
 

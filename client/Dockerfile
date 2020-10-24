@@ -38,15 +38,13 @@ WORKDIR /client
 
 ENV PATH /client/node_modules/.bin:$PATH
 
-COPY reason-relay.tgz ./
+COPY reason-relay-0.11.0.tgz ./
 
 COPY package.json ./
 
-COPY yarn* ./
+# COPY yarn* .
 
 RUN dir
-
-RUN npm i -g yarn --force
 
 RUN yarn
 

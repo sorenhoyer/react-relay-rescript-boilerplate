@@ -3,7 +3,7 @@
 module Types = {
   [@ocaml.warning "-30"];
   type response_foos = {
-    id: option(string),
+    id: string,
     text: string,
   };
 
@@ -15,7 +15,7 @@ module Types = {
 module Internal = {
   type responseRaw;
   let responseConverter: Js.Dict.t(Js.Dict.t(Js.Dict.t(string))) = [%raw
-    {json| {"__root":{"foos":{"n":"","na":""},"foos_id":{"n":""}}} |json}
+    {json| {"__root":{"foos":{"n":"","na":""}}} |json}
   ];
   let responseConverterMap = ();
   let convertResponse = v =>

@@ -5,7 +5,7 @@ import { foos } from './database';
 const fooType = new GraphQLObjectType({
   name: 'Foo',
   fields: {
-    id: { type: GraphQLID },
+    id: { type: GraphQLNonNull(GraphQLID) },
     text: { type: GraphQLNonNull(GraphQLString) },
   },
 });
@@ -16,7 +16,7 @@ const queryType = new GraphQLObjectType({
     foo: {
       type: fooType,
       args: {
-        id: { type: GraphQLString },
+        id: { type: GraphQLNonNull(GraphQLID) },
       },
       resolve: (_, { id }) => {
         return foos[id];
