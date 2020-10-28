@@ -1,8 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const webpack = require("webpack");
 
 const outputDir = path.join(__dirname, "assets");
+
+const isDevelopment = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   entry: "./src/Index.bs.js",
@@ -13,6 +16,7 @@ module.exports = {
     filename: "index.js"
   },
   plugins: [
+    isDevelopment && new ReactRefreshPlugin(),
     new HtmlWebpackPlugin({
       template: "index.html"
     }),
@@ -26,6 +30,6 @@ module.exports = {
     host: '0.0.0.0',
     port: process.env.PORT || 3000,
     historyApiFallback: true,
-    // hot: true,
+    hot: true,
   },
 };
