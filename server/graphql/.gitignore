@@ -1,9 +1,6 @@
-*.bs.js
-*.swo
-*.swp
-.bsb.lock
+*.tsbuildinfo
 .DS_Store
-.merlin
+.eslintcache
 .npm
 .pnp.*
 .vscode-test
@@ -13,9 +10,6 @@
 .yarn-integrity
 .yarn/unplugged
 dist/
-lib/
 node_modules/
 yarn-debug.log*
 yarn-error.log*
-
-
