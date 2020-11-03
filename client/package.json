@@ -6,12 +6,12 @@
   "dependencies": {
     "bs-fetch": "^0.6.2",
     "graphql": "^15.3.0",
-    "react": "0.0.0-experimental-d28bd2994",
-    "react-dom": "0.0.0-experimental-d28bd2994",
-    "react-relay": "0.0.0-experimental-8058ef82",
+    "react": "0.0.0-experimental-4ead6b530",
+    "react-dom": "0.0.0-experimental-4ead6b530",
+    "react-relay": "0.0.0-experimental-183bdd28",
     "reason-promise": "^1.1.1",
     "reason-react": "^0.9.1",
-    "reason-relay": "file:./reason-relay-0.11.0.tgz",
+    "reason-relay": "file:./reason-relay-v0.11.0.tgz",
     "relay-config": "^10.0.1",
     "relay-runtime": "^10.0.1",
     "subscriptions-transport-ws": "^0.9.18"
@@ -30,8 +30,8 @@
   },
   "license": "ISC",
   "resolutions": {
-    "react": "0.0.0-experimental-d28bd2994",
-    "react-dom": "0.0.0-experimental-d28bd2994"
+    "react": "0.0.0-experimental-4ead6b530",
+    "react-dom": "0.0.0-experimental-4ead6b530"
   },
   "scripts": {
     "bs:build": "bsb -make-world",
