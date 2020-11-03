@@ -17,5 +17,6 @@
 dist/
 lib/
 node_modules/
+server/*/**/.env
 yarn-debug.log*
 yarn-error.log*
