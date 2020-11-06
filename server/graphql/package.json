@@ -37,8 +37,7 @@
   },
   "license": "ISC",
   "scripts": {
-    "build": "yarn copy-graphql && tsc && node dist/index.js",
-    "copy-graphql": "copyfiles -u 1 src/schema/*.graphql dist",
+    "build": "yarn tsc && node dist/index.js",
     "create-env": "node scripts/create-env.js",
     "lint": "eslint src/**/*.{js,ts}",
     "lint-fix": "eslint src/**/*.{js,ts} --fix",
