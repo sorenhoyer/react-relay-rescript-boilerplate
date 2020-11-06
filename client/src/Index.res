@@ -1,6 +1,1 @@
-ReactExperimental.renderConcurrentRootAtElementWithId(
-  <ReasonRelay.Context.Provider environment=RelayEnv.environment>
-    <App />
-  </ReasonRelay.Context.Provider>,
-  "root",
-)
+ReactExperimental.renderConcurrentRootAtElementWithId(<Root />, "root")

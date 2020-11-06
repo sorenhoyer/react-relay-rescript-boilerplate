@@ -95,7 +95,7 @@ return {
     "argumentDefinitions": [],
     "kind": "Fragment",
     "metadata": null,
-    "name": "MainQuery",
+    "name": "FoosQuery",
     "selections": (v0/*: any*/),
     "type": "Query",
     "abstractKey": null
@@ -104,16 +104,16 @@ return {
   "operation": {
     "argumentDefinitions": [],
     "kind": "Operation",
-    "name": "MainQuery",
+    "name": "FoosQuery",
     "selections": (v0/*: any*/)
   },
   "params": {
-    "cacheID": "8095f4a020281cdafda68ab0ab395e5d",
+    "cacheID": "bbca9715034e6f39e2f33f08bec58ae3",
     "id": null,
     "metadata": {},
-    "name": "MainQuery",
+    "name": "FoosQuery",
     "operationKind": "query",
-    "text": "query MainQuery {\n  foos {\n    id\n    text\n  }\n}\n"
+    "text": "query FoosQuery {\n  foos {\n    id\n    text\n  }\n}\n"
   }
 };
 })() |json}

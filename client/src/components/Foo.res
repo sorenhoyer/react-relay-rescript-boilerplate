@@ -10,13 +10,8 @@ module Query = %relay.query(
 )
 
 @react.component
-let make = (~id) => {
-  let query = Query.use(
-    ~variables={
-      id: id,
-    },
-    (),
-  )
+let make = (~fooQueryPreloaded) => {
+  let query = Query.usePreloaded(~queryRef=fooQueryPreloaded, ())
 
   {
     switch query.foo {
